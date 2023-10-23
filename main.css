@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow:hidden;
+}
+
+.container{
+    display:  flex;
+    width: 90vw;
+}
+.panel{
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 90vh;
+    flex:0.5;
+    position: relative;
+    border-radius: 45px;
+    margin:25px;
+    transition: flex 2s ease-in;
+}
+.panel h2{
+    position: absolute;
+    bottom:1000px;
+    left:50px;
+    font-size: 5rem;
+    color:rgb(222, 20, 20);
+    opacity: 0;
+    transition: opacity 1s ease-in 2s;
+}
+.panel.active{
+    flex:5;
+}
+.panel.active h2 {
+    opacity: 1;
+}
